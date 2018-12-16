@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package server;
+
+message Empty {
+}
+
+message ChangeRequest {
+  bool screen_on = 1;
+} 
+
+service Server {
+	rpc Change (ChangeRequest) returns (Empty) {}
+}

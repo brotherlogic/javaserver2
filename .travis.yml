@@ -1,0 +1,11 @@
+language: java
+
+branches:
+  only:
+  - master
+
+jdk:
+ - openjdk10
+
+after_success:
+- ./gradlew cobertura coveralls
