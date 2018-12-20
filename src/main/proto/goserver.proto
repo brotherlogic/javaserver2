@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package goserver;
+
+message Empty {}
+
+message Alive {
+  string name = 1;
+}
+
+message MoteRequest {
+  bool master = 1;
+}
+
+message State {
+  string key = 1;
+  int64 time_value = 2;
+  int64 value = 3;
+}
+
+message ServerState {
+  repeated State states = 1;
+}
+
+service goserverService {
+  rpc IsAlive (Alive) returns (Alive) {};
+  rpc Mote(MoteRequest) returns (Empty) {};
+  rpc State(Empty) returns (ServerState) {};
+}
