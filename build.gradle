@@ -19,7 +19,7 @@ group 'com.github.brotherlogic.javaserver'
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 
-afterReleaseBuild.dependsOn uploadArchives
+afterReleaseBuild.dependsOn publish
 
 sourceCompatibility = 10
 targetCompatibility = 10
