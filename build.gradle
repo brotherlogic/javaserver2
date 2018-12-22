@@ -11,12 +11,15 @@ plugins {
  id 'net.saliman.cobertura' version '2.3.1'
  id 'com.github.kt3k.coveralls' version '2.8.2'
  id 'net.researchgate.release' version '2.6.0'
+ id 'maven-publish'	       
 }
 
 group 'com.github.brotherlogic.javaserver'
 
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
+
+afterReleaseBuild.dependsOn uploadArchives
 
 sourceCompatibility = 10
 targetCompatibility = 10
@@ -54,4 +57,19 @@ protobuf {
       grpc {}
     }
   }
+}
+
+publishing {
+    publications {
+        myLibrary(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'myRepo'
+            url = "file://home/simon/repo"
+        }
+    }
 }
