@@ -5,7 +5,6 @@ bintray {
   user = System.getenv("BINTRAY_USER")
   key = System.getenv("BINTRAY_KEY")
   override = true
-  dryRun = true
   pkg {
     userOrg = "brotherlogic"
     repo = "default"
