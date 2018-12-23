@@ -6,9 +6,9 @@ buildscript {
   dependencies {
     classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.8.1"
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.7'
-    classpath "com.netflix.nebula:nebula-publishing-plugin:7.1.0"
+    classpath "com.netflix.nebula:nebula-publishing-plugin:9.4.1"
     classpath "com.netflix.nebula:nebula-release-plugin:6.3.5"
-    classpath 'com.netflix.nebula:nebula-bintray-plugin:3.5.2'
+    classpath 'com.netflix.nebula:nebula-bintray-plugin:5.0.0'
   }
 }
 
