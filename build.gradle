@@ -24,6 +24,8 @@ apply plugin: "nebula.release"
 apply plugin: "nebula.nebula-bintray-publishing"
 apply from: "$rootDir/gradle/published.gradle"
 
+postRelease.dependsOn bintrayUpload
+
 sourceCompatibility = 10
 targetCompatibility = 10
 
