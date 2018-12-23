@@ -7,7 +7,7 @@ bintray {
   override = true
   pkg {
     userOrg = "brotherlogic"
-    repo = "default"
+    repo = "brotherlogic"
     websiteUrl = "https://github.com/brotherlogic/javaserver2"
     issueTrackerUrl = "https://github.com/brotherlogic/javaserver2/issues"
     vcsUrl = "https://github.com/brotherlogic/javaserver.git"
