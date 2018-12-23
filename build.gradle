@@ -17,14 +17,11 @@ plugins {
  id 'com.github.kt3k.coveralls' version '2.8.2'
 }
 
-allprojects {
-   apply plugin: "nebula.release"
-   group = 'com.github.brotherlogic.javaserver2'
-}
+group = 'com.github.brotherlogic.javaserver2'
 
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
-
+apply plugin: "nebula.release"	
 apply from: "$rootDir/gradle/published.gradle"
 
 sourceCompatibility = 10
