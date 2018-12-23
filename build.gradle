@@ -16,7 +16,7 @@ plugins {
  id 'maven-publish'	       
 }
 
-group 'com.github.brotherlogic.javaserver'
+group 'com.github.brotherlogic.javaserver2'
 
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
