@@ -13,8 +13,4 @@ bintray {
     vcsUrl = "https://github.com/brotherlogic/javaserver.git"
     licenses = ["Apache-2.0"]
   }
-
-   filesSpec {
-             from 'build/libs'
-	     }
 }
