@@ -17,11 +17,13 @@ plugins {
  id 'maven-publish'	       
 }
 
-group 'com.github.brotherlogic.javaserver2'
+allprojects {
+   apply plugin: "nebula.release"
+   group = 'com.github.brotherlogic.javaserver2'
+}
 
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
-apply plugin: "nebula.release"
 
 apply from: "$rootDir/gradle/published.gradle"
 
