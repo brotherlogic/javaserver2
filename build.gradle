@@ -21,6 +21,7 @@ group 'com.github.brotherlogic.javaserver'
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: "nebula.release"
+apply plugin: "nebula.maven-publish"
 apply plugin: "nebula.nebula-bintray-publishing"
 
 sourceCompatibility = 10
@@ -75,17 +76,4 @@ publishing {
             url = "file://home/simon/repo"
         }
     }
-}
-
-bintray {
-  user = System.getenv("BINTRAY_USER")
-  apiKey = System.getenv("BINTRAY_KEY")
-  pkg {
-    userOrg = "brotherlogic"
-    repo = "brotherlogic"
-    websiteUrl = "https://github.com/brotherlogic/javaserver2"
-    issueTrackerUrl = "https://github.com/brotherlogic/javaserver2/issues"
-    vcsUrl = "https://github.com/brotherlogic/javaserver2.git"
-    licenses = ["Apache-2.0"]
-  }
 }

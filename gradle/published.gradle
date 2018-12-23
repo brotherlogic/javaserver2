@@ -1,0 +1,15 @@
+apply plugin: "nebula.nebula-bintray-publishing"
+
+bintray {
+  user = System.getenv("BINTRAY_USER")
+  key = System.getenv("BINTRAY_KEY")
+  pkg {
+    userOrg = "robfletcher"
+    repo = "demos"
+    websiteUrl = "https://github.com/robfletcher/gradle-release-demo"
+    issueTrackerUrl = "https://github.com/robfletcher/gradle-release-demo/issues"
+    vcsUrl = "https://github.com/robfletcher/gradle-release-demo.git"
+    licenses = ["Apache-2.0"]
+    labels = ["demo", "gradle", "bintray", "nebula"]
+  }
+}
