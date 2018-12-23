@@ -22,6 +22,8 @@ apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: "nebula.release"
 
+apply from: "$rootDir/gradle/published.gradle"
+
 sourceCompatibility = 10
 targetCompatibility = 10
 
