@@ -21,7 +21,8 @@ group = 'com.github.brotherlogic.javaserver2'
 
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
-apply plugin: "nebula.release"	
+apply plugin: "nebula.release"
+apply plugin: "nebula.nebula.bintray"
 apply from: "$rootDir/gradle/published.gradle"
 
 sourceCompatibility = 10
