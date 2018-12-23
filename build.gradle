@@ -9,7 +9,6 @@ buildscript {
     classpath "com.netflix.nebula:nebula-publishing-plugin:7.1.0"
     classpath "com.netflix.nebula:nebula-release-plugin:6.3.5"
     classpath "com.netflix.nebula:nebula-bintray-plugin:3.5.2"
-    classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2"
   }
 }
 
@@ -37,11 +36,9 @@ repositories {
     google()
 }
 
-
 cobertura.coverageFormats = ['html', 'xml']
 
-dependencies {
-	     
+dependencies {	     
      compile 'javax.annotation:javax.annotation-api:1.3.1'
      compile 'org.slf4j:slf4j-api:1.7.25'
      compile "com.google.protobuf:protobuf-java:3.0.0"
