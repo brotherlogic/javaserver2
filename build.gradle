@@ -4,7 +4,7 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-  classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.7.3"
+    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.8.1"
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.7'
     classpath "com.netflix.nebula:nebula-publishing-plugin:7.1.0"
     classpath "com.netflix.nebula:nebula-release-plugin:6.3.5"
