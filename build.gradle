@@ -15,7 +15,6 @@ buildscript {
 plugins {
  id 'net.saliman.cobertura' version '2.3.1'
  id 'com.github.kt3k.coveralls' version '2.8.2'
- id 'maven-publish'	       
 }
 
 allprojects {
@@ -65,19 +64,4 @@ protobuf {
       grpc {}
     }
   }
-}
-
-publishing {
-    publications {
-        myLibrary(MavenPublication) {
-            from components.java
-        }
-    }
-
-    repositories {
-        maven {
-            name = 'myRepo'
-            url = "file://home/simon/repo"
-        }
-    }
 }
