@@ -8,7 +8,7 @@ buildscript {
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.7'
     classpath "com.netflix.nebula:nebula-publishing-plugin:7.1.0"
     classpath "com.netflix.nebula:nebula-release-plugin:6.3.5"
-    classpath "com.netflix.nebula:nebula-bintray-plugin:3.5.2"
+    classpath 'com.netflix.nebula:nebula-bintray-plugin:3.5.2'
   }
 }
 
@@ -22,7 +22,7 @@ group = 'com.github.brotherlogic.javaserver2'
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: "nebula.release"
-apply plugin: "nebula.nebula.bintray"
+apply plugin: "nebula.nebula-bintray"
 apply from: "$rootDir/gradle/published.gradle"
 
 sourceCompatibility = 10
