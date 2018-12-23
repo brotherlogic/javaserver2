@@ -4,6 +4,7 @@ apply plugin: "nebula.nebula-bintray-publishing"
 bintray {
   user = System.getenv("BINTRAY_USER")
   key = System.getenv("BINTRAY_KEY")
+  override = true
   pkg {
     userOrg = "brotherlogic"
     repo = "default"
