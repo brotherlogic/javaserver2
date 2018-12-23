@@ -1,16 +1,18 @@
 buildscript {
   repositories {
+    jcenter()
     mavenCentral()
   }
   dependencies {
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.7'
+    classpath "com.netflix.nebula:nebula-release-plugin:6.3.3"
+    classpath "com.netflix.nebula:nebula-bintray-plugin:3.5.2"
   }
 }
 
 plugins {
  id 'net.saliman.cobertura' version '2.3.1'
  id 'com.github.kt3k.coveralls' version '2.8.2'
- id 'net.researchgate.release' version '2.6.0'
  id 'maven-publish'	       
 }
 
@@ -18,8 +20,7 @@ group 'com.github.brotherlogic.javaserver'
 
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
-
-afterReleaseBuild.dependsOn publish
+apply plugin: "nebula.release"
 
 sourceCompatibility = 10
 targetCompatibility = 10
