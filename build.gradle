@@ -4,11 +4,9 @@ buildscript {
     mavenCentral()
   }
   dependencies {
-    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.8.1"
+    classpath "com.netflix.nebula:nebula-publishing-plugin:9.4.1"	
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.7'
-    classpath "com.netflix.nebula:nebula-publishing-plugin:9.4.1"
-    classpath "com.netflix.nebula:nebula-release-plugin:6.3.5"
-    classpath 'com.netflix.nebula:nebula-bintray-plugin:5.0.0'
+    classpath "com.netflix.nebula:nebula-release-plugin:10.1.1"
   }
 }
 
@@ -41,6 +39,9 @@ dependencies {
      compile 'io.grpc:grpc-netty-shaded:1.17.1'
      compile 'io.grpc:grpc-protobuf:1.17.1'
      compile 'io.grpc:grpc-stub:1.17.1'
+
+
+
      testCompile 'junit:junit:4.12'
 }
 
