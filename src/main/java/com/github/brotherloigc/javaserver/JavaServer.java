@@ -405,7 +405,7 @@ public abstract class JavaServer {
 
         //Clean this after three hours
 		RegistryEntry request = RegistryEntry.newBuilder().setName(getServerName()).setIp(getIPAddress()).setTimeToClean(1000*60*60*3).setIgnoresMaster(true)
-                .setIdentifier(serverName).build();
+		    .setIdentifier(serverName).build();
         try {
 			registry = blockingStub.registerService(RegisterRequest.newBuilder().setService(request).build()).getService();
 		} catch (StatusRuntimeException e) {
@@ -485,7 +485,7 @@ public abstract class JavaServer {
 		RegistryEntry response = null;
 		RegistryEntry request = RegistryEntry.newBuilder().setName(serverName).build();
 		try {
-			response = blockingStub.discover(DiscoverRequest.newBuilder().setRequest(request).build()).getService();
+		    response = blockingStub.discover(DiscoverRequest.newBuilder().setRequest(request).setCaller("javaserver2").build()).getService();
 		} catch (StatusRuntimeException e) {
 			e.printStackTrace();
 
