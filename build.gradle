@@ -2,18 +2,19 @@ buildscript {
   repositories {
     jcenter()
     mavenCentral()
+    google()
   }
   dependencies {
     classpath "com.netflix.nebula:nebula-publishing-plugin:9.4.1"	
-    classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.7'
+    classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.10'
     classpath "com.netflix.nebula:nebula-release-plugin:10.1.1"
-    classpath 'com.netflix.nebula:nebula-bintray-plugin:7.3.0'
   }
 }
 
 plugins {
  id 'java-library'
  id 'com.github.kt3k.coveralls' version '2.8.2'
+ id 'nebula.nebula-bintray' version '3.5.2'
 }
 
 group = 'com.github.brotherlogic'
@@ -40,8 +41,6 @@ dependencies {
      compile 'io.grpc:grpc-netty-shaded:1.17.1'
      compile 'io.grpc:grpc-protobuf:1.17.1'
      compile 'io.grpc:grpc-stub:1.17.1'
-
-
 
      testCompile 'junit:junit:4.12'
 }
