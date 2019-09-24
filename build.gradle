@@ -1,8 +1,6 @@
 buildscript {
   repositories {
-    jcenter()
     mavenCentral()
-    google()
   }
   dependencies {
     classpath "com.netflix.nebula:nebula-publishing-plugin:9.4.1"	
@@ -30,8 +28,6 @@ targetCompatibility = 8
 
 repositories {
     mavenCentral()
-    jcenter()
-    google()
 }
 
 dependencies {	     
