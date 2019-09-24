@@ -4,7 +4,7 @@ buildscript {
     jcenter()
   }
   dependencies {
-  classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.8.1"	
+  classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.9.10"	
     classpath "com.netflix.nebula:nebula-publishing-plugin:9.4.1"	
     classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.10'
     classpath "com.netflix.nebula:nebula-release-plugin:10.1.1"
