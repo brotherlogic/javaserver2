@@ -15,6 +15,7 @@ id "com.dorongold.task-tree" version "1.3.1"
 id "com.jfrog.bintray" version "1.8.4"
 id 'nebula.release' version '11.0.0'
 id 'nebula.maven-publish' version '8.1.0'
+id 'nebula.bintray-publishing' version '8.1.0'
 }
 
 group = 'com.github.brotherlogic'
