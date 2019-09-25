@@ -14,7 +14,7 @@ buildscript {
 plugins {
  id 'java-library'
  id 'com.github.kt3k.coveralls' version '2.8.2'
- //id 'nebula.nebula-bintray' version '3.5.2'
+ id 'nebula.nebula-bintray' version '5.0.0'
 id "com.dorongold.task-tree" version "1.3.1"	
 }
 
@@ -23,7 +23,7 @@ group = 'com.github.brotherlogic'
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: "nebula.release"
-//apply plugin: "nebula.nebula-bintray-publishing"
+apply plugin: "nebula.nebula-bintray-publishing"
 apply from: "$rootDir/gradle/published.gradle"
 
 sourceCompatibility = 8
