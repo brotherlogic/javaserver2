@@ -276,15 +276,15 @@ public abstract class JavaServer {
 		this.rServer = resolveServer;
 		discover(resolveServer);
 
-		while (!register(discoveryHost, discoveryPort)) {
+		/*while (!register(discoveryHost, discoveryPort)) {
 			try {
 				Thread.sleep(10000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
+			}*/
 
-		Thread heartbeat = new Thread(new Runnable() {
+		/*Thread heartbeat = new Thread(new Runnable() {
 			@Override
 			public void run() {
 				while (running) {
@@ -299,7 +299,7 @@ public abstract class JavaServer {
 				}
 			}
 		});
-		heartbeat.start();
+		heartbeat.start();*/
 
 		Thread screen = new Thread(new Runnable() {
 			@Override
@@ -316,7 +316,7 @@ public abstract class JavaServer {
 		});
 		screen.start();
 
-		if (getServices().size() > 0) {
+		/*if (getServices().size() > 0) {
 			try {
 				ServerBuilder builder = ServerBuilder.forPort(registry.getPort());
 				for (BindableService service : getServices())
@@ -325,9 +325,9 @@ public abstract class JavaServer {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		} else {
+			} else {*/
 			localServe();
-		}
+			//}
 	}
 
 	public abstract void localServe();
