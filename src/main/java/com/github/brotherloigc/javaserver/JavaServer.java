@@ -252,13 +252,8 @@ public abstract class JavaServer {
 				if (!server.endsWith("/")) {
 					add = "/resolve";
 				}
-				URL url = new URL("https://" + server + add);
-
-				System.out.println("Getting path: " + url);
-				BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-				String[] elems = reader.readLine().split(":");
-				discoveryHost = elems[0];
-				discoveryPort = Integer.parseInt(elems[1]);
+				discoveryHost = "98.37.147.121";
+				discoveryPort = 50055;
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
