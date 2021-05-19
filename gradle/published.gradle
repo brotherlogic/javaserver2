@@ -3,7 +3,7 @@ apply plugin: "nebula.nebula-bintray-publishing"
 apply plugin: "nebula.javadoc-jar"
 apply plugin: "nebula.source-jar"
 
-bintray {
+/*bintray {
   user = System.getenv("BINTRAY_USER")
   key = System.getenv("BINTRAY_KEY")
   override = true
@@ -15,4 +15,4 @@ bintray {
     vcsUrl = "https://github.com/brotherlogic/javaserver.git"
     licenses = ["Apache-2.0"]
   }
-}
+}*/
