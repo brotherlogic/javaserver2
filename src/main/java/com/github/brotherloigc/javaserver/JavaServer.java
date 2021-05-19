@@ -254,6 +254,7 @@ public abstract class JavaServer {
 				}
 				URL url = new URL("https://" + server + add);
 
+				System.out.println("Getting path: " + url)
 				BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
 				String[] elems = reader.readLine().split(":");
 				discoveryHost = elems[0];
